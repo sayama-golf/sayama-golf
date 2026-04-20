@@ -45,7 +45,6 @@ main{
     padding:0 20px;
 }
 
-/* タイトル */
 .main-title{
     font-size:1.8rem;
     font-weight:bold;
@@ -62,29 +61,18 @@ main{
     border:2px solid #c8e6c9;
     border-radius:10px;
     padding:15px;
-    height:340px;
+    height:360px;
     overflow-y:auto;
     box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* カード */
 .archive-card{
-    display:block;
-    text-decoration:none;
-    color:#333;
     background:#f9fff9;
     border:1px solid #d9eadb;
     border-left:6px solid #2e7d32;
     border-radius:8px;
     padding:16px;
     margin-bottom:15px;
-    transition:0.25s;
-}
-
-.archive-card:hover{
-    transform:translateY(-2px);
-    box-shadow:0 4px 10px rgba(0,0,0,0.08);
-    background:#f1fff1;
 }
 
 .archive-date{
@@ -97,6 +85,17 @@ main{
 .archive-text{
     font-size:0.96rem;
     color:#444;
+    margin-bottom:4px;
+}
+
+.detail-link{
+    color:#0066cc;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+.detail-link:hover{
+    color:#004999;
 }
 
 /* ======================
@@ -143,7 +142,7 @@ header{
 }
 
 .scroll-box{
-    height:300px;
+    height:320px;
 }
 
 .archive-date{
@@ -170,35 +169,44 @@ header{
         狭山市民ゴルフのご案内
     </div>
 
-    <!-- 縦スクロールウィンドウ -->
+    <!-- スクロールウィンドウ -->
     <div class="scroll-box">
 
-        <a href="archive/2026.09.28/" class="archive-card">
+        <!-- 2026.09.28 -->
+        <div class="archive-card">
             <div class="archive-date">
                 <i class="fa-solid fa-calendar-days icon"></i>2026.09.28
             </div>
             <div class="archive-text">
-                秋季市民ゴルフ大会を開催予定。初心者から経験者まで幅広くご参加いただけます。詳細はこちら。
+                <a href="archive/2026.09.28/" class="detail-link">詳細はこちら</a>
             </div>
-        </a>
+            <div class="archive-text">開催場所：狭山ゴルフクラブ</div>
+            <div class="archive-text">定員：140名</div>
+        </div>
 
-        <a href="archive/2026.11.30/" class="archive-card">
+        <!-- 2026.11.30 -->
+        <div class="archive-card">
             <div class="archive-date">
                 <i class="fa-solid fa-calendar-days icon"></i>2026.11.30
             </div>
             <div class="archive-text">
-                晩秋交流ゴルフコンペ開催。親睦を深めながら楽しくラウンドできるイベントです。
+                <a href="archive/2026.11.30/" class="detail-link">詳細はこちら</a>
             </div>
-        </a>
+            <div class="archive-text">開催場所：日高カントリークラブ</div>
+            <div class="archive-text">定員：140名</div>
+        </div>
 
-        <a href="archive/2027.03.10/" class="archive-card">
+        <!-- 2027.03.10 -->
+        <div class="archive-card">
             <div class="archive-date">
                 <i class="fa-solid fa-calendar-days icon"></i>2027.03.10
             </div>
             <div class="archive-text">
-                春季大会開催予定。新シーズン開幕戦として多くの皆様のご参加をお待ちしております。
+                <a href="archive/2027.03.10/" class="detail-link">詳細はこちら</a>
             </div>
-        </a>
+            <div class="archive-text">開催場所：武蔵カントリー 笹井コース</div>
+            <div class="archive-text">定員：140名</div>
+        </div>
 
     </div>
 
