@@ -23,39 +23,44 @@ body{
 }
 
 /* ======================
-   ヘッダー背景画像の入れ方
-   ① 同じ階層に header.jpg を置く
-   ② 下記 url("header.jpg") を画像名に合わせて変更
+   ヘッダー
 ====================== */
 header{
     position:relative;
+    width:100%;
+    min-height:260px;
+
     background-image:url("header.jpg");
-    background-size:cover;
-    background-position:center;
+    background-size:100% auto;
+    background-position:center top;
     background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     color:#fff;
     text-align:center;
-    padding:70px 15px;
-    font-size:2.2rem;
+    font-size:2.3rem;
     font-weight:bold;
     letter-spacing:1px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.15);
     overflow:hidden;
 }
 
-/* 黒レイヤー（文字を見やすくする） */
+/* 黒レイヤー */
 header::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.35);
 }
 
-/* 文字を前面に出す */
+/* タイトル文字 */
 header span{
     position:relative;
     z-index:2;
-    text-shadow:0 3px 10px rgba(0,0,0,0.8);
+    text-shadow:0 4px 12px rgba(0,0,0,0.9);
+    padding:10px 20px;
 }
 
 /* ======================
@@ -105,7 +110,7 @@ main{
 }
 
 /* ======================
-   スクロールウィンドウ
+   スクロール欄
 ====================== */
 .scroll-box{
     background:#ffffff;
@@ -169,7 +174,6 @@ main{
 
 .contact-item{
     margin-bottom:10px;
-    font-size:1rem;
 }
 
 .icon{
@@ -184,12 +188,18 @@ main{
 @media (max-width:768px){
 
 header{
-    font-size:1.5rem;
-    padding:50px 10px;
+    min-height:170px;
+    font-size:1.45rem;
+    background-size:100% auto;
+}
+
+main{
+    margin:25px auto;
+    padding:0 14px;
 }
 
 .main-title{
-    font-size:1.4rem;
+    font-size:1.35rem;
 }
 
 .scroll-box{
@@ -216,63 +226,72 @@ header{
 
 <main>
 
-    <!-- コメント -->
-    <div class="intro-box">
-        <div class="intro-title">狭山市のゴルフ愛好者の皆様へ</div>
-        <p>親睦と技術向上を目的とした「狭山市民ゴルフ大会」のご案内です。</p>
-        <p>狭山市に在住の方、狭山市に勤務の方であればどなたでも参加可能です。</p>
-        <p>日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。</p>
-        <div class="intro-footer">皆様のご参加を心よりお待ちしております。</div>
+<div class="intro-box">
+    <div class="intro-title">狭山市のゴルフ愛好者の皆様へ</div>
+    <p>親睦と技術向上を目的とした「狭山市民ゴルフ大会」のご案内です。</p>
+    <p>狭山市に在住の方、狭山市に勤務の方であればどなたでも参加可能です。</p>
+    <p>日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。</p>
+    <div class="intro-footer">皆様のご参加を心よりお待ちしております。</div>
+</div>
+
+<div class="main-title">
+    狭山市民ゴルフのご案内
+</div>
+
+<div class="scroll-box">
+
+    <div class="archive-card">
+        <div class="archive-date">
+            <i class="fa-solid fa-calendar-days icon"></i>2027.03.10
+        </div>
+        <div class="archive-text">
+            <a href="archives/2027.03.10/" class="detail-link">詳細はこちら</a>
+        </div>
+        <div class="archive-text">開催場所：武蔵カントリークラブ 笹井コース</div>
+        <div class="archive-text">開催予定日：2027年3月10日(水)</div>
     </div>
 
-    <div class="main-title">
-        狭山市民ゴルフのご案内
+    <div class="archive-card">
+        <div class="archive-date">
+            <i class="fa-solid fa-calendar-days icon"></i>2026.11.30
+        </div>
+        <div class="archive-text">
+            <a href="archives/2026.11.30/" class="detail-link">詳細はこちら</a>
+        </div>
+        <div class="archive-text">開催場所：日高カントリークラブ</div>
+        <div class="archive-text">開催予定日：2026年11月30日(月)</div>
     </div>
 
-    <!-- スクロールウィンドウ -->
-    <div class="scroll-box">
-
-        <div class="archive-card">
-            <div class="archive-date"><i class="fa-solid fa-calendar-days icon"></i>2027.03.10</div>
-            <div class="archive-text"><a href="archives/2027.03.10/" class="detail-link">詳細はこちら</a></div>
-            <div class="archive-text">開催場所：武蔵カントリークラブ 笹井コース</div>
-            <div class="archive-text">開催予定日：2027年3月10日(水)</div>
+    <div class="archive-card">
+        <div class="archive-date">
+            <i class="fa-solid fa-calendar-days icon"></i>2026.09.28
         </div>
-
-        <div class="archive-card">
-            <div class="archive-date"><i class="fa-solid fa-calendar-days icon"></i>2026.11.30</div>
-            <div class="archive-text"><a href="archives/2026.11.30/" class="detail-link">詳細はこちら</a></div>
-            <div class="archive-text">開催場所：日高カントリークラブ</div>
-            <div class="archive-text">開催予定日：2026年11月30日(月)</div>
+        <div class="archive-text">
+            <a href="archives/2026.09.28/" class="detail-link">詳細はこちら</a>
         </div>
-
-        <div class="archive-card">
-            <div class="archive-date"><i class="fa-solid fa-calendar-days icon"></i>2026.09.28</div>
-            <div class="archive-text"><a href="archives/2026.09.28/" class="detail-link">詳細はこちら</a></div>
-            <div class="archive-text">開催場所：狭山ゴルフ・クラブ</div>
-            <div class="archive-text">開催予定日：2026年9月28日(月)</div>
-        </div>
-
+        <div class="archive-text">開催場所：狭山ゴルフ・クラブ</div>
+        <div class="archive-text">開催予定日：2026年9月28日(月)</div>
     </div>
 
-    <!-- 問合せ先 -->
-    <div class="contact-box">
+</div>
 
-        <div class="contact-title">
-            <i class="fa-solid fa-circle-info icon"></i>問合せ先
-        </div>
+<div class="contact-box">
 
-        <div class="contact-item">
-            <i class="fa-solid fa-phone icon"></i>
-            TEL：000-0000-0000
-        </div>
-
-        <div class="contact-item">
-            <i class="fa-solid fa-envelope icon"></i>
-            E-mail：xxx@xxx.com
-        </div>
-
+    <div class="contact-title">
+        <i class="fa-solid fa-circle-info icon"></i>問合せ先
     </div>
+
+    <div class="contact-item">
+        <i class="fa-solid fa-phone icon"></i>
+        TEL：000-0000-0000
+    </div>
+
+    <div class="contact-item">
+        <i class="fa-solid fa-envelope icon"></i>
+        E-mail：xxx@xxx.com
+    </div>
+
+</div>
 
 </main>
 
