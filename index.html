@@ -29,16 +29,13 @@ header{
     position:relative;
     width:100%;
     min-height:320px;
-
     background-image:url("header.jpg");
     background-size:cover;
     background-position:center center;
     background-repeat:no-repeat;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     color:#fff;
     text-align:center;
     font-size:3.5rem;
@@ -62,20 +59,25 @@ header span{
 }
 
 /* ======================
-   Hits Counter
+   カウンター
 ====================== */
 .counter-wrap{
-    background:#ffffff;
-    text-align:center;
-    padding:14px 10px;
-    border-bottom:1px solid #dcdcdc;
+    background:#f5f7f5; /* 本文背景と統一 */
+    padding:12px 20px;
+    display:flex;
+    justify-content:flex-end; /* 右寄せ */
+    align-items:center;
+}
+
+.counter-box{
+    text-align:right;
 }
 
 .counter-title{
-    font-size:0.95rem;
+    font-size:0.9rem;
     color:#2e7d32;
     font-weight:bold;
-    margin-bottom:8px;
+    margin-bottom:6px;
 }
 
 /* ======================
@@ -228,8 +230,17 @@ main{
     font-size:0.92rem;
 }
 
+.counter-wrap{
+    padding:10px 14px;
+}
+
 .counter-title{
-    font-size:0.85rem;
+    font-size:0.78rem;
+}
+
+.counter-box img{
+    max-width:100%;
+    height:auto;
 }
 
 }
@@ -243,15 +254,11 @@ main{
     <span>狭山ゴルフ協会</span>
 </header>
 
-<!-- カウンター（ヘッダー下） -->
+<!-- カウンター -->
 <div class="counter-wrap">
-
-    <div class="counter-title">
-        累計アクセス数
+    <div class="counter-box">
+        <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fsayama-golf.github.io%2Fsayama-golf-taikai%2F&label=%E6%9C%AC%E6%97%A5%E3%81%AE%E6%9D%A5%E8%A8%AA%E8%80%85%E6%95%B0+%2F+%E7%B4%AF%E8%A8%88%E6%9D%A5%E8%A8%AA%E8%80%85%E6%95%B0%E3%80%80&icon=info-circle&color=%23198754&message=&style=flat&tz=UTC" alt="アクセスカウンター">
     </div>
-
-    <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fsayama-golf.github.io%2Fsayama-golf-taikai%2F&label=%E6%9C%AC%E6%97%A5%E3%81%AE%E6%9D%A5%E8%A8%AA%E8%80%85%E6%95%B0+%2F+%E7%B4%AF%E8%A8%88%E6%9D%A5%E8%A8%AA%E8%80%85%E6%95%B0%E3%80%80&icon=info-circle&color=%23198754&message=&style=flat&tz=UTC">
-
 </div>
 
 <main>
