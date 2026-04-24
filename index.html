@@ -23,19 +23,40 @@ body{
 }
 
 /* ======================
-   ヘッダー
+   ヘッダー背景画像の入れ方
+   ① 同じ階層に header.jpg を置く
+   ② 下記 url("header.jpg") を画像名に合わせて変更
 ====================== */
 header{
-    background:linear-gradient(135deg,#1b5e20,#2e7d32);
+    position:relative;
+    background-image:url("header.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     color:#fff;
     text-align:center;
-    padding:28px 15px;
-    font-size:2rem;
+    padding:70px 15px;
+    font-size:2.2rem;
     font-weight:bold;
     letter-spacing:1px;
     box-shadow:0 3px 10px rgba(0,0,0,0.15);
+    overflow:hidden;
 }
 
+/* 黒レイヤー（文字を見やすくする） */
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+/* 文字を前面に出す */
+header span{
+    position:relative;
+    z-index:2;
+    text-shadow:0 3px 10px rgba(0,0,0,0.8);
+}
 
 /* ======================
    コメント欄
@@ -82,7 +103,7 @@ main{
     margin-bottom:20px;
     text-align:center;
 }
-    
+
 /* ======================
    スクロールウィンドウ
 ====================== */
@@ -164,7 +185,7 @@ main{
 
 header{
     font-size:1.5rem;
-    padding:22px 10px;
+    padding:50px 10px;
 }
 
 .main-title{
@@ -190,7 +211,7 @@ header{
 <body>
 
 <header>
-    狭山ゴルフ協会
+    <span>狭山ゴルフ協会</span>
 </header>
 
 <main>
@@ -207,42 +228,27 @@ header{
     <div class="main-title">
         狭山市民ゴルフのご案内
     </div>
-    
+
     <!-- スクロールウィンドウ -->
     <div class="scroll-box">
 
-        <!-- 2027.03.10 -->
         <div class="archive-card">
-            <div class="archive-date">
-                <i class="fa-solid fa-calendar-days icon"></i>2027.03.10
-            </div>
-            <div class="archive-text">
-                <a href="archives/2027.03.10/" class="detail-link">詳細はこちら</a>
-            </div>
+            <div class="archive-date"><i class="fa-solid fa-calendar-days icon"></i>2027.03.10</div>
+            <div class="archive-text"><a href="archives/2027.03.10/" class="detail-link">詳細はこちら</a></div>
             <div class="archive-text">開催場所：武蔵カントリークラブ 笹井コース</div>
             <div class="archive-text">開催予定日：2027年3月10日(水)</div>
         </div>
 
-        <!-- 2026.11.30 -->
         <div class="archive-card">
-            <div class="archive-date">
-                <i class="fa-solid fa-calendar-days icon"></i>2026.11.30
-            </div>
-            <div class="archive-text">
-                <a href="archives/2026.11.30/" class="detail-link">詳細はこちら</a>
-            </div>
+            <div class="archive-date"><i class="fa-solid fa-calendar-days icon"></i>2026.11.30</div>
+            <div class="archive-text"><a href="archives/2026.11.30/" class="detail-link">詳細はこちら</a></div>
             <div class="archive-text">開催場所：日高カントリークラブ</div>
             <div class="archive-text">開催予定日：2026年11月30日(月)</div>
         </div>
 
-        <!-- 2026.09.28 -->
         <div class="archive-card">
-            <div class="archive-date">
-                <i class="fa-solid fa-calendar-days icon"></i>2026.09.28
-            </div>
-            <div class="archive-text">
-                <a href="archives/2026.09.28/" class="detail-link">詳細はこちら</a>
-            </div>
+            <div class="archive-date"><i class="fa-solid fa-calendar-days icon"></i>2026.09.28</div>
+            <div class="archive-text"><a href="archives/2026.09.28/" class="detail-link">詳細はこちら</a></div>
             <div class="archive-text">開催場所：狭山ゴルフ・クラブ</div>
             <div class="archive-text">開催予定日：2026年9月28日(月)</div>
         </div>
